@@ -1,0 +1,16 @@
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: promethues-crds
+#   namespace: argocd
+#   finalizers:
+#   - resources-finalizer.argocd.argoproj.io
+# spec:
+#   destination:
+#     namespace: argocd
+#     server: {{ .Values.spec.destination.server }}
+#   project: default
+#   source:
+#     path: chart-crds
+#     repoURL: https://github.com/mohramadan911/prometheus-helm-charts
+#     targetRevision: HEAD
